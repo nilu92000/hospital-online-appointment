@@ -1,0 +1,263 @@
+  
+/* NAVigation bar CSS Start */
+  
+  /* CSS Reset*/
+  :root{
+	  --headback : #df3b90;
+	  --primary-blue : #33f;
+	  --sec: #ee63ab;;
+  }
+  
+    body {
+        margin: 0px;
+        padding: 0px;
+		font-family:Calibri;
+    }
+
+    .header{
+        //background-color: black;
+		display:flex;
+		flex-wrap:wrap;
+		position:sticky;
+		top:0;
+		padding:1em 0;
+		margin:auto;
+		align-content:center;
+		width:100%;
+        background: var(--headback);
+        background-size: cover;
+        background-blend-mode: darken;
+		vertical-align:middle;
+		box-shadow:0 3px 3px; 
+    }
+	
+	
+    .left {
+        display:inline;
+        color: white;
+        font-size: 35px;
+		margin:auto 2em;
+		order:0;
+		flex-grow:1
+    }
+
+    .left img {
+		float:left;
+        width: 70px;
+        text-align: center;
+    }
+
+    .left div {
+		float:left;
+        padding: 11px 22px;
+		text-indent: -9999px;
+		line-height:0;
+    }
+	
+	
+	.left div::after{
+		content: "Markham Hospital";
+  text-indent: 0;
+  display: block;
+  line-height: initial; 
+	}
+
+    .mid {
+        display: block;
+		flex-basis:100%;
+        top: 15px;
+        margin:auto;
+		padding:auto;
+		vertical-align:middle;
+        font-size: 25px;
+		order:2;
+		background:white;
+		color:var(--headback);
+    }
+	
+    .right {
+        display: inline;
+        font-size: 16pt;
+		height:100%;
+		padding:auto;
+		margin:auto 2em;
+    }
+	
+	.right a{
+		color:white;
+	}
+	
+	nav{
+		padding:0 1em;
+		margin:0 1em;
+	}
+	
+	
+	nav ul{
+		display:flex;
+		flex-direction:row;
+		padding:0px;
+		width:100%;
+		position:relative;
+		justify-content:center;
+	}
+	
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	
+	nav>ul>li:not(:first-child){
+		border-left:2px solid var(--headback);
+	}
+	
+	
+	nav ul ul{
+		display:none;
+		position:absolute;
+		//left:0;
+		border:1px solid white;
+		top:100%;
+		width:6em;
+		padding:0;
+	}
+	
+	nav ul ul li {
+		float: none; 
+		position: relative;
+		background:var(--headback);
+		padding: 10px;
+		width:auto;
+	}
+	
+	nav ul li:hover > ul{
+		display: block;
+	}
+
+    nav ul li {
+		position:relative;
+		padding:5px 20px;
+		display:inherit;
+		float:none;
+		list-style-type:none;
+		//width:100px;
+		//margin:auto;
+		justify-content:center;
+		text-align:center;
+        font-size: 16pt;
+		color:var(--headback);
+}
+
+
+	
+nav a{
+    color:var(--headback);
+    text-decoration: none;
+    text-transform:capitalize;
+    padding: 0.1em;
+}
+
+nav li li>a{
+	color:white;
+}
+
+
+    nav a:hover {
+    text-decoration: underline;
+
+  }
+
+.searchbar{
+	padding:5px;
+}
+.btn {
+	padding:5px;
+    border-radius: 5px;
+   }
+	
+.content{
+	width:70%;
+	margin:auto;
+	padding:2em;
+}
+
+.content h1{
+	border-left: 5px solid var(--headback);
+	padding-left: 1em;
+}
+	
+.content img{
+	width:100%;
+}
+
+.options a{
+	width:calc(100% - 5em);
+	margin:auto;
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	background:var(--sec);
+	color:white;
+	padding:10px;
+	border-radius:5px;
+
+}
+
+.msg{
+	width:calc(100% - 100px);
+	padding:50px;
+	border-radius:50px;
+	border:1px solid grey;
+	background:#eee;
+	text-align:center;
+}
+
+tbody{
+	overflow-x:auto;
+}
+	
+// form table 
+
+form table
+{
+  table-layout:auto;
+  //overflow-x:auto;
+  //display:flex;
+  margin:auto;
+  border-collapse:collapse;
+  border-spacing:1em;
+}
+
+form td,th
+{
+  padding:1em;
+}
+
+form > table > td:nth-child(odd){
+	text-align:right;
+}
+
+form table td[colspan="2"]{
+	//padding:0;
+	margin:auto;
+	text-align:center;
+}
+
+form table input[type="submit"]{
+	background:var(--primary-blue);
+	color:white;
+	padding:1em;
+	border-radius:10px;
+	width:50%;
+}
+
+@media (max-width:600px){
+	.header{
+		flex-direction:column;
+		position:static;
+	}
+	nav ul{
+		flex-direction:column;
+	}
+}
+/* NAVigation bar CSS End */
+

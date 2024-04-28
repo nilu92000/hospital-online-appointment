@@ -1,0 +1,34 @@
+:root{
+	tcolor:##5eb7b7;
+}
+
+#reg{
+	border-collapse:collapse;
+	margin:auto;
+	text-align:left;
+	border:1px solid green;
+	width:100%;
+	overflow:auto;
+}
+
+#reg td,th{
+	border:1px solid var(--headback);
+	padding:1em;
+	text-align:center;
+}
+
+#reg th{
+	//border:1px solid white;
+	background:var(--headback);
+	color:white;
+}
+
+#reg img{
+	width:5em;
+	height:auto;
+}
+
+#reg tbody{
+	overflow-x:auto;
+}
+
